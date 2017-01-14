@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import Home from './components/Home.vue'
 import Person from './components/Person.vue'
+import Persons from './components/Persons.vue'
 
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
@@ -13,7 +14,9 @@ Vue.use(VueRouter)
 
 const routes = [
   {path: '/home', component: Home},
-  {path: '/person', component: Person}
+  {path: '/person', component: Person},
+  {path: '/person/:id', component: Person},
+  {path: '/persons', component: Persons}
 ]
 
 const router = new VueRouter({
